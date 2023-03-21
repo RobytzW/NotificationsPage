@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    /* weights: 500, 800 */
+}
+
+:root {
+    /* Sizes */
+    --fontSize: 1rem;
+    --containerSize: 800px;
+
+    /* Primary */
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --veryLightGrayishBlue: hsl(210, 60%, 98%);
+    --lightGrayishBlue1: hsl(211, 68%, 94%);
+    --lightGrayishBlue2: hsl(205, 33%, 90%);
+    --grayishBlue: hsl(219, 14%, 63%);
+    --darkGrayishBlue: hsl(219, 12%, 42%);
+    --veryDarkBlue: hsl(224, 21%, 14%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(80%, var(--containerSize));
+    background-color: var(--veryLightGrayishBlue);
+    gap: 20px;
+    padding-bottom: 1rem;
+}
+
+main header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+main header .notificationNumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+main header .notificationNumber h3 {
+    padding: .6rem;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+main header p {
+    color: var(--darkGrayishBlue);
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+main header p:hover {
+    color: var(--veryDarkBlue);
+}
+
+.new::after {
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: 10px;
+}
+
+.time {
+    color: var(--darkGrayishBlue);
+}
+
+.mark, .angela, .jacob {
+    width: 90%;
+    padding: 0 1rem;
+    min-height: 90px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--lightGrayishBlue1);
+}
+
+.rizky, .kimberley, .nathan, .anna {
+    width: 90%;
+    padding: 0 1rem;
+    min-height: 90px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--veryLightGrayishBlue);
+}
+
+.kimberley, .rizky {
+    position: relative;
+}
+
+.message {
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--grayishBlue);
+}
+
+.picture {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.mark .picture {
+    background-image: url('images/avatar-mark-webber.webp');
+}
+
+.angela .picture {
+    background-image: url('images/avatar-angela-gray.webp');
+}
+
+.jacob .picture {
+    background-image: url('images/avatar-jacob-thompson.webp');
+}
+
+.rizky .picture {
+    background-image: url('images/avatar-rizky-hasanuddin.webp');
+    align-self: flex-start;
+}
+
+.kimberley .picture {
+    background-image: url('images/avatar-kimberly-smith.webp');
+}
+
+.nathan .picture {
+    background-image: url('images/avatar-nathan-peterson.webp');
+}
+
+.anna .picture {
+    background-image: url('images/avatar-anna-kim.webp');
+}
+
+.kimberley .photo {
+    position: absolute;
+    background-image: url('images/image-chess.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 50px;
+    min-height: 50px;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.text {
+    color: var(--darkGrayishBlue);
+}
+
+.mark .text span {
+    color: var(--darkGrayishBlue);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.jacob .text span {
+    color: var(--blue);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.anna .text span {
+    color: var(--blue);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.nathan .text span {
+    color: var(--darkGrayishBlue);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* @media(max-width: 849px) {
+    .mark, .angela, .jacob, .rizky, .kimberley, .nathan, .anna {
+        padding: 0 1rem;
+    }
+} */
+
+@media(max-width:669px) {
+
+    main header h1 {
+        font-size: calc(1.5 * var(--fontSize));
+    }
+
+    #cnt {
+        padding: .4rem;
+    }
+
+    .photo {
+        align-self: center;
+    }
+
+    .kimberley .photo {
+        position: static;
+    }
+
+    .kimberley {
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 464px) {
+    main header h1 {
+        font-size: calc(1.2 * var(--fontSize));
+    }
+
+    #cnt {
+        padding: .2rem;
+    }
+
+    #all {
+        font-size: calc(.9 * var(--fontSize));
+    }
+
+    .mark, .angela, .jacob, .rizky, .kimberley, .nathan, .anna {
+        width: 100%;
+    }
+
+    main {
+        padding: 0;
+        width: 100%;
+    }
+}
